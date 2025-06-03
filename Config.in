@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LIBRETRO_GENESIS-PLUS-GX
+        bool "libretro-genesis-plus-gx"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+        help
+          A libretro libretro-genesis-plus-gx emulator core for ARM.
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_GENESIS-PLUS-GX needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
